@@ -4,7 +4,7 @@
 var APP_DNS = process.env.OPENSHIFT_APP_DNS_ALIAS || process.env.OPENSHIFT_APP_DNS;
 
 process.env.ROOT_URL = "http://" + APP_DNS || "http://localhost";
-process.env.MONGO_URL = "mongodb://admin:6rI6mMeJ9XXu@database-systemartelabs.rhcloud.com:27017/database";
+process.env.MONGO_URL = "mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/";
 // process.env.MAIL_URL = "smtp://email:password@smtp.gmail.com:465";
 process.env.PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 process.env.BIND_IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
