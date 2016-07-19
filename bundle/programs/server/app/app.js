@@ -22,28 +22,6 @@ Meteor.methods({                                                     // 3
 });                                                                  // 3
 ///////////////////////////////////////////////////////////////////////
 
-}},"server":{"app.js":function(){
-
-///////////////////////////////////////////////////////////////////////
-//                                                                   //
-// server/app.js                                                     //
-//                                                                   //
-///////////////////////////////////////////////////////////////////////
-                                                                     //
-Meteor.startup(function () {                                         // 1
-  if (Posts.find().count() === 0) {                                  // 2
-    for (i = 1; i <= 10; i++) {                                      // 3
-      Posts.insert({ title: 'Post ' + Random.id() });                // 4
-    }                                                                // 5
-  }                                                                  // 6
-});                                                                  // 7
-                                                                     //
-Meteor.publish('posts', function () {                                // 9
-  return Posts.find();                                               // 10
-});                                                                  // 11
-///////////////////////////////////////////////////////////////////////
-
 }}},{"extensions":[".js",".json"]});
 require("./both/posts.js");
-require("./server/app.js");
 //# sourceMappingURL=app.js.map
