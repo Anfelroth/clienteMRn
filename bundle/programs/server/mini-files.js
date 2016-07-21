@@ -81,16 +81,10 @@ var wrapPathFunction = function (name, partialPaths) {
         // forget about conversion of absolute paths for Windows
         return toDosPath(p, partialPaths);
       });
-
-      var result = f.apply(path, args);
-      if (typeof result === "string") {
-        result = toPosixPath(result, partialPaths);
-      }
-
-      return result;
+      return toPosixPath(f.apply(path, args), partialPaths);
+    } else {
+      return f.apply(path, arguments);
     }
-
-    return f.apply(path, arguments);
   };
 };
 

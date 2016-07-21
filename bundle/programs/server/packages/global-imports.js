@@ -6,6 +6,7 @@ ReactiveVar = Package['reactive-var'].ReactiveVar;
 Tracker = Package.tracker.Tracker;
 Deps = Package.tracker.Deps;
 ECMAScript = Package.ecmascript.ECMAScript;
+ReactMeteorData = Package['react-meteor-data'].ReactMeteorData;
 Meteor = Package.meteor.Meteor;
 global = Package.meteor.global;
 meteorEnv = Package.meteor.meteorEnv;
@@ -28,6 +29,7 @@ Map = Package['ecmascript-runtime'].Map;
 Set = Package['ecmascript-runtime'].Set;
 meteorBabelHelpers = Package['babel-runtime'].meteorBabelHelpers;
 Promise = Package.promise.Promise;
+Accounts = Package['accounts-base'].Accounts;
 Autoupdate = Package.autoupdate.Autoupdate;
 HTML = Package.htmljs.HTML;
 
